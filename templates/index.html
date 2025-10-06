@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>openai-plus</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="light">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/static/favicon.png" alt="logo" />
+        <span>openai-plus</span>
+      </div>
+      <div class="controls">
+        <label class="switch">
+          <input id="themeToggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <span id="themeLabel">light</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="chat" class="chat"></div>
+      <div class="composer">
+        <input id="message" placeholder="Message openai-plus" />
+        <input id="image" type="file" accept="image/*" />
+        <input id="audio" type="file" accept="audio/*" />
+        <button id="send">Send</button>
+      </div>
+
+      <details class="panel">
+        <summary>Feedback</summary>
+        <textarea id="fb_message" placeholder="Message context (optional)"></textarea>
+        <input id="fb_rating" type="number" min="0" max="5" value="5" />
+        <input id="fb_feature" placeholder="Feature request" />
+        <input id="fb_tags" placeholder="Comma-separated tags" />
+        <button id="fb_submit">Submit Feedback</button>
+        <div id="fb_status" class="status"></div>
+      </details>
+
+      <details class="panel">
+        <summary>AutoAI</summary>
+        <button id="run_tests">Run AutoAI Tests</button>
+        <pre id="autoai_stdout"></pre>
+        <pre id="autoai_report"></pre>
+      </details>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
